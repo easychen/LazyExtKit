@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+
+    "name": "方糖扩展原型",
+    "description": "一个简单的Chrome扩展原型，可添加功能后使用。插件 Logo 图案由 https://thenounproject.com/monstercritic 绘制，按 CC 协议使用。",
+    "version": "1.0",
+
+    "permissions": [
+        "http://*/*","https://*/*",
+        "tabs",
+        "notifications",
+        "alarms"
+    ],
+    "browser_action": {
+    "default_icon": "logo.png"
+    }
+    ,
+    "background": 
+    {
+        "scripts": ["background.js"]
+    },
+    "web_accessible_resources": [
+        "logo.png"
+    ]
+    /*
+    ,
+    "content_scripts": [
+        {
+            // 当域名匹配时，加载的 js 和 css
+             "matches": ["http://weibo.com/*","http://www.weibo.com/*","https://weibo.com/*","https://www.weibo.com/*"],
+             "css": ["app.css"],
+             "js": ["jquery-3.2.1.min.js","app.js"]
+        }
+    ]
+    */
+    
+}
